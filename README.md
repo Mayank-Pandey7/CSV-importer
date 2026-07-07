@@ -1,10 +1,10 @@
-# 🚀 GrowEasy AI-Powered CSV Importer
+#  GrowEasy AI-Powered CSV Importer
 
 An AI-powered CSV importer that accepts CSVs of **any column layout** (Facebook Lead Exports, Google Ads Exports, Excel sheets, real estate CRM exports, sales reports, manually created spreadsheets) and intelligently maps them into GrowEasy's fixed CRM schema using an LLM.
 
 ---
 
-# 🏗️ Architecture
+#  Architecture
 
 ```text
 Next.js frontend --CSV file--> Express backend --batched rows--> OpenAI
@@ -22,7 +22,7 @@ confirm button                 <--JSON-- return { imported, skipped, totals }
 
 ---
 
-# 📁 Project Structure
+#  Project Structure
 
 ```text
 groweasy-csv-importer/
@@ -60,7 +60,7 @@ groweasy-csv-importer/
 
 ---
 
-# ⚙️ Setup & Run Locally
+#  Setup & Run Locally
 
 ## Prerequisites
 
@@ -69,7 +69,7 @@ groweasy-csv-importer/
 
 ---
 
-## 1️⃣ Backend
+##  Backend
 
 ```bash
 cd backend
@@ -103,7 +103,7 @@ http://localhost:5000/health
 
 ---
 
-## 2️⃣ Frontend
+## 2️ Frontend
 
 ```bash
 cd frontend
@@ -120,7 +120,7 @@ http://localhost:3000
 
 ---
 
-## 3️⃣ Test It
+##  Test It
 
 Upload:
 
@@ -132,7 +132,7 @@ It has non-standard column names (`Full Name`, `Alt Email`, `Phone Number`, `Lea
 
 ---
 
-# 🤖 How the AI Mapping Works
+#  How the AI Mapping Works
 
 The backend sends each batch of raw rows to the LLM with a system prompt that:
 
@@ -156,7 +156,7 @@ If a batch still fails, its rows are marked skipped with the error reason rather
 
 ---
 
-# 🚀 Deployment
+#  Deployment
 
 ### Frontend
 
@@ -172,7 +172,7 @@ If a batch still fails, its rows are marked skipped with the error reason rather
 
 ---
 
-# 🔑 Environment Variables
+#  Environment Variables
 
 ## Backend (`backend/.env`)
 
@@ -196,7 +196,7 @@ If a batch still fails, its rows are marked skipped with the error reason rather
 
 ---
 
-# 📝 Notes / Future Improvements
+#  Notes / Future Improvements
 
 - Add streaming progress via SSE/WebSocket for per-batch updates.
 - Add virtualization (`react-window`) for very large CSVs (10k+ rows).
